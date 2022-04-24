@@ -1,0 +1,35 @@
+---
+title: "ECO 395 Homework 4: Taylor Neal"
+output: rmarkdown::github_document
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(tidyverse)
+#library(rpart)
+#library(rpart.plot)
+#library(rsample) 
+#library(modelr)
+#library(randomForest)
+#library(gbm)
+#library(ggmap)
+
+wine <- read.csv("https://raw.githubusercontent.com/taylorneal/homework-4/master/data/wine.csv", header = TRUE)
+social_marketing <- read.csv("https://raw.githubusercontent.com/taylorneal/homework-4/master/data/social_marketing.csv", header = TRUE)
+#groceries <- read.csv("https://raw.githubusercontent.com/taylorneal/homework-4/master/data/groceries.txt", header = FALSE)
+
+set.seed(9)
+```
+## 1) Clustering and PCA
+
+TBU
+
+
+## 2) Market Segmentation
+
+TBU 
+
+
+## 3) Association Rules for Grocery Purchases
+
+TBU 
