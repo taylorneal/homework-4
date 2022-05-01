@@ -101,6 +101,18 @@ TBU
 
 TBU 
 
+```{r social-marketing-cor, echo = FALSE, fig.align = 'center', fig.width = 8, fig.height = 8}
+
+SM = social_marketing[,c(3:5,7:37)]
+
+cor_SM = cor(SM)
+
+corrplot(cor_SM, type = "upper", order = "hclust")
+
+```
+
+TBU
+
 
 ## 3) Association Rules for Grocery Purchases
 

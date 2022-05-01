@@ -41,6 +41,10 @@ TBU
 
 TBU
 
+<img src="taylor-neal-hw4_files/figure-gfm/social-marketing-cor-1.png" style="display: block; margin: auto;" />
+
+TBU
+
 ## 3) Association Rules for Grocery Purchases
 
 Intro
