@@ -45,6 +45,22 @@ TBU
 
 TBU
 
+<img src="taylor-neal-hw4_files/figure-gfm/heat-matrix-1-1.png" style="display: block; margin: auto;" />
+
+TBU
+
+<img src="taylor-neal-hw4_files/figure-gfm/heat-matrix-2-1.png" style="display: block; margin: auto;" />
+
+<img src="taylor-neal-hw4_files/figure-gfm/heat-matrix-3-1.png" style="display: block; margin: auto;" />
+
+<img src="taylor-neal-hw4_files/figure-gfm/heat-matrix-4-1.png" style="display: block; margin: auto;" />
+
+<img src="taylor-neal-hw4_files/figure-gfm/heat-matrix-5-1.png" style="display: block; margin: auto;" />
+
+<img src="taylor-neal-hw4_files/figure-gfm/heat-matrix-6-1.png" style="display: block; margin: auto;" />
+
+Conclusion
+
 ## 3) Association Rules for Grocery Purchases
 
 Intro

@@ -76,29 +76,29 @@ ggplot(wine) +
 ##########
 ##########
 
-X = social_marketing[,c(3:5,7:37)]
+SM = social_marketing[,c(3:5,7:37)]
 #X = scale(X, center = TRUE, scale = TRUE)
 
-PCA = prcomp(X, rank = 10)
+PCA = prcomp(SM, rank = 10)
 
 summary(PCA)
 round(PCA$rotation[,1:5],2)
 
-cor_X = cor(X)
+cor_SM = cor(SM)
 #which(cor_X > 0.5)
-cor_X[cor_X > 0.5]
+cor_SM[cor_SM > 0.5]
 
 k_grid = seq(2, 15, by = 1)
-N = nrow(X)
+N = nrow(SM)
 CH_grid = foreach(k = k_grid, .combine = 'c') %do% {
-  cluster_k = kmeanspp(X, k, nstart = 20)
+  cluster_k = kmeanspp(SM, k, nstart = 20)
   W = cluster_k$tot.withinss
   B = cluster_k$betweenss
   CH = (B/W)*((N-k)/(k-1))
   CH
 }
 
-cluster1 = kmeanspp(X, 6, nstart = 20)
+cluster1 = kmeanspp(SM, 6, nstart = 10)
 
 
 zdf <- as.data.frame(as.table(cor_X))
@@ -106,7 +106,14 @@ count(subset(zdf, abs(Freq) > 0.3 & abs(Freq) != 1))
 
 subset(zdf, abs(Freq) > 0.3 & abs(Freq) != 1)
 
-corrplot(cor_X, type="upper", order="hclust")
+corrplot(cor_SM, type="upper", order="hclust")
+
+heatmap(as.matrix(SM[cluster1$cluster == 1,]), Colv = NA, Rowv = NA)
+heatmap(as.matrix(SM[cluster1$cluster == 2,]), Colv = NA, Rowv = NA)
+heatmap(as.matrix(SM[cluster1$cluster == 3,]), Colv = NA, Rowv = NA)
+heatmap(as.matrix(SM[cluster1$cluster == 4,]), Colv = NA, Rowv = NA)
+heatmap(as.matrix(SM[cluster1$cluster == 5,]), Colv = NA, Rowv = NA)
+heatmap(as.matrix(SM[cluster1$cluster == 6,]), Colv = NA, Rowv = NA)
 
 ## college_uni, sports_playing, online_gaming (4)
 ## cooking, beauty, fashion, shopping, photo_sharing (6)

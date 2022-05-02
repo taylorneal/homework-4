@@ -113,6 +113,55 @@ corrplot(cor_SM, type = "upper", order = "hclust")
 
 TBU
 
+```{r heat-matrix-1, echo = FALSE, fig.align = 'center', fig.width = 6, fig.height = 7}
+
+cluster1 = kmeanspp(SM, 6, nstart = 10)
+
+heatmap(as.matrix(SM[cluster1$cluster == 1,]), Colv = NA, Rowv = NA, main = 
+          'Cluster 1 (Health/Nutrition and Fitness)')
+#heatmap(as.matrix(SM[cluster1$cluster == 2,]), Colv = NA, Rowv = NA)
+
+```
+
+
+TBU
+
+```{r heat-matrix-2, echo = FALSE, fig.width = 6, fig.height = 7, fig.align = 'center'}
+
+heatmap(as.matrix(SM[cluster1$cluster == 2,]), Colv = NA, Rowv = NA, main = 
+          'Cluster 2 (Other)')
+
+```
+
+```{r heat-matrix-3, echo = FALSE, fig.width = 6, fig.height = 7, fig.align = 'center'}
+
+heatmap(as.matrix(SM[cluster1$cluster == 3,]), Colv = NA, Rowv = NA, main = 
+          'Cluster 3 (Cooking and Fashion/Beauty)')
+
+```
+
+```{r heat-matrix-4, echo = FALSE, fig.width = 6, fig.height = 7, fig.align = 'center'}
+
+heatmap(as.matrix(SM[cluster1$cluster == 4,]), Colv = NA, Rowv = NA, main = 
+          'Cluster 4 (Travel, News and Politics)')
+
+```
+
+```{r heat-matrix-5, echo = FALSE, fig.width = 6, fig.height = 7, fig.align = 'center'}
+
+heatmap(as.matrix(SM[cluster1$cluster == 5,]), Colv = NA, Rowv = NA, main = 
+          'Cluster 5 (College and Gaming)')
+
+```
+
+```{r heat-matrix-6, echo = FALSE, fig.width = 6, fig.height = 7, fig.align = 'center'}
+
+heatmap(as.matrix(SM[cluster1$cluster == 6,]), Colv = NA, Rowv = NA, main = 
+          'Cluster 6 (Family Topics and Sport Fandom)')
+
+```
+
+Conclusion
 
 ## 3) Association Rules for Grocery Purchases
 
